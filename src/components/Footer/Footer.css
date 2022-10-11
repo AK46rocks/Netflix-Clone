@@ -1,0 +1,97 @@
+/*-------------- Footer Starts-------
+------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+:root {
+    --font-family: 'Manrope', sans-serif;
+  
+    --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+    
+    --color-bg: #040C18;
+    --color-footer : #031B34;
+    --color-blog: #042c54;
+    --color-text: #81AFDD;
+    --color-subtext: #FF8A71;
+  }
+footer{
+    background: var(--color-footer);
+    color: #fff;
+    margin-top: 30px;
+    padding-bottom: 5rem;
+}
+.footer-heading h1{
+    font-family: var(--font-family);
+    font-size: 62px;
+    font-weight: 800;
+    line-height: 75px;
+    text-align: center;
+    letter-spacing: -.04em;
+}
+.footer-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    text-align: center;
+
+    margin-bottom: 10rem;
+    cursor: pointer;
+}
+.footer-btn a{
+    border: 1px solid #fff;
+    padding: 1rem;
+    font-size: 18px;
+    font-family: var(--font-family);
+    line-height: 21px;
+    color: #fff;
+    word-spacing: 2px;
+}
+footer h4{
+    color:  white;
+    font-size: 18px;
+    font-weight: 500;
+    font-family: var(--font-family);
+    margin: 1rem 1.7rem;
+}
+footer li{
+    list-style: none;
+    font-size: 14px;
+    font-weight: lighter;
+    cursor: pointer;
+    margin: 1rem 0rem;
+}
+footer li a{
+    color: var(--text-color)!important;
+    font-weight: lighter!important;
+    font-family: var(--font-family);
+}
+footer li:hover {
+    color: var(--primary-color);
+}
+footer .main-hero-para{
+    margin: 0;
+}
+
+footer .fontawesome-style{
+    font-size: 48px;
+}
+footer .fontawesome-style:hover{
+    color:var(--primary-color);
+}
+footer .line{
+    color: #fff;
+    width: 100%;
+}
+.footer-reserved{
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-family);
+}
+
+@media screen and (max-width:700px) {
+    .footer-heading h1{
+        font-size: 36px;
+    }
+}
+/*---------------- Footer Ends-------
+------------------------------------------------------------- */

@@ -1,0 +1,15 @@
+.select__season{
+    outline: 0;
+    border: 0;
+    background-color: #e50914;
+    color: white;
+    padding: 5px;
+}
+.select__ep{
+    outline: 0;
+    border: 0;
+    background-color: #e50914;
+    color: white;
+    padding: 5px;
+    margin-left: 10px;
+}
