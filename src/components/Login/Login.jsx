@@ -123,7 +123,7 @@ const Login = ({ email }) => {
                   &nbsp; Sign in with Google
                 </button>
                 <h6>
-                  New to Netflix? &nbsp;
+                  New to Hulku TV? &nbsp;
                   <span className="register" onClick={() => setShow(true)}>
                     Sign up now
                   </span>

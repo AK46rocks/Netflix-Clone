@@ -87,8 +87,8 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
           <div className="modal-content">
             <div className="modal-header bg-dark">
               <img
-                src="/public/images/hulk-logo.svg"
-                alt="Netflix"
+                src="/images/hulk-logo.svg"
+                alt="HulkuTV"
                 width="60px"
               />
               <button

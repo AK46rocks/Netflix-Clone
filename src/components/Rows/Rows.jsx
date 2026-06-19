@@ -29,7 +29,7 @@ const Rows = ({ title, fetchUrl, isLargeRow = false, mediaType }) => {
     <>
       {movies.length > 0 ? (
         <>
-          <div className="rows mt-3">
+          <div className="rows mt-5">
             <h1 className="rows__title">{title}</h1>
             <div className="rows__posters">
               {movies.map((movies) => (

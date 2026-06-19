@@ -5,6 +5,7 @@
     background:linear-gradient(to right, transparent 0%, black 100%);;
 }
 .rows__title{
+    font-size: 30px;
     color: #fff;
     padding-left: 1rem;
 }
