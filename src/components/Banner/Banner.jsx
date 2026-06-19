@@ -25,10 +25,6 @@ const Banner = ({ movieId, movieType }) => {
           `/${movieType}/${movieId}?api_key=${API_KEY}&append_to_response=videos,release_dates`
         )
         .then((result) => {
-          console.log(
-            "🚀 ~ file: Banner.jsx ~ line 28 ~ .then ~ result",
-            result
-          );
           setMovieInfo(result?.data);
           setLoading(false);
           return result;

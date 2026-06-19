@@ -24,7 +24,7 @@ function HomeScreen() {
 
           return result;
         })
-        .catch((error) => console.log("Internet Connection Error", error));
+        .catch((error) => console.error("Internet Connection Error", error));
     };
 
     fetchData();

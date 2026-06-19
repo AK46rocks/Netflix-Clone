@@ -18,7 +18,7 @@ const Rows = ({ title, fetchUrl, isLargeRow = false, mediaType }) => {
           return getData;
         })
         .catch((error) => {
-          return console.log(error.message);
+          return console.error(error.message);
         });
     };
 
