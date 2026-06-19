@@ -1,15 +1,30 @@
-.select__season{
+.select__season, .select__server{
     outline: 0;
     border: 0;
-    background-color: #e50914;
-    color: white;
+    background-color: #5D7924;
+    color: black;
     padding: 5px;
 }
 .select__ep{
     outline: 0;
     border: 0;
-    background-color: #e50914;
-    color: white;
+    background-color: #5D7924;
+    color: black;
     padding: 5px;
     margin-left: 10px;
+}
+
+.select__server {
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.fs__button {
+    color: black;
+    background-color: #5D7924;
+    font-size: 14px;
+    padding: 4px;
+    display: flex;
+    align-items: left;
+    border-radius: 8px;
 }

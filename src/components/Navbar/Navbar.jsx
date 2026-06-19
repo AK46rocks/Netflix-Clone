@@ -51,7 +51,7 @@ const Navbar = () => {
       >
         <div className="container">
           <NavLink className="navbar-brand" to="/">
-            <img className="nav__logo" src="/images/logo.png" alt="navLogo" />
+            <img className="nav__logo" src="/images/hulk-logo.svg" alt="navLogo" />
           </NavLink>
           <div className="search__content">
             <input

@@ -51,7 +51,7 @@
     margin-left: 0;
     font-size: 1rem;
     color: white;
-    background-color: #e50914;
+    background-color: #5D7924;
     cursor: pointer;
     border: none;
     font-weight: 600;
@@ -76,7 +76,7 @@
 
 .plans .plan__btn{
     color: white;
-    background-color: #e50914;
+    background-color: #5D7924;
     padding: 7px 17px 7px 17px;
     border-radius: 0;
     font-size: 1.1rem;

@@ -8,12 +8,6 @@ const Footer = () => {
   return (
     <footer>
       <div className="container section__margin ">
-        <div className="footer-heading section__padding text-center  mb-4 pt-5 ms-md-5">
-          <h2 className="gradient__text ">
-            {user.displayName}, Enjoy Latest Movies And TV Shows Free of Cost.
-          </h2>
-        </div>
-
         {/* <div className="footer-btn">
           <a href="#/tswap">Join Now</a>
         </div> */}
@@ -95,7 +89,7 @@ const Footer = () => {
             <hr className="line" />
             <div className="mt-5 footer-reserved ">
               <p className="main-hero-para text-center w-100">
-                © 2022 Netflix Clone. All rights reserved.
+                © 2026 Hulku TV. All rights reserved.
               </p>
             </div>
           </div>
