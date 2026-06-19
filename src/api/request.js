@@ -23,6 +23,7 @@ const requests = {
   fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
   fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
   fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
+  fetchImdbId:`/movie/{movie_id}/external_ids?api_key=xxx`,
   imageUrlPrefix: "https://image.tmdb.org/t/p/original",
 };
 export default requests;

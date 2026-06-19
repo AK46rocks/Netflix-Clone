@@ -28,7 +28,6 @@ const Navbar = () => {
   };
   const listener = (event) => {
     if (event.key === "Enter" || event.key === "NumpadEnter") {
-      console.log("Enter key was pressed. Run your function.");
       event.preventDefault();
       if (searchInput.length > 0) {
         searchMovie();

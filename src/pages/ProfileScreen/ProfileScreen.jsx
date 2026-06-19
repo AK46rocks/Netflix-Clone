@@ -16,7 +16,7 @@ const ProfileScreen = () => {
         window.location.href = "/";
       })
       .catch((error) => {
-        console.log(error.message);
+        console.error(error.message);
       });
   };
 

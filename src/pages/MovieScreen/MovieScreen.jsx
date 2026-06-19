@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { API_KEY } from "../../api/request";
 import Banner from "../../components/Banner/Banner";

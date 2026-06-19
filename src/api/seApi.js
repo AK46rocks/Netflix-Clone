@@ -23,9 +23,15 @@ export default seApi;
 // https://vsrc.su/embed/tv?tmdb=tt0944947
 
 
+//Server 4 
+// https://web.nxsha.app/embed/tv/84105/1/1?lang=hindi&autoplay=true
+// https://web.nxsha.app/embed/movie/1451344?lang=hindi&autoplay=true
+
+//Server 5
+
 // Server 4 (Not using , but working)
 // https://www.NontonGo.win/embed/movie/931285/
 // https://www.NontonGo.win/embed/tv/
 
-// Server 5
+// Server 5 (Not in use)
 // https://remotestre.am/e/?tmdb=931285
