@@ -1,0 +1,21 @@
+.pre__footer_section {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.hulk__smash__logo {
+    width: 300px;
+    height: auto;
+    filter: drop-shadow(2px 4px 120px rgb(166, 166, 166));
+}
+
+.gradient__text {
+    color: white;
+    font-size: 24px;
+    font-style: italic;
+}

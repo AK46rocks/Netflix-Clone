@@ -10,7 +10,7 @@ const ProfileNavbar = () => {
           <div className="new__nav__content">
             <div className="netflix__img">
               <NavLink to="/">
-                <img src="/images/logo.png" alt="Img" className="net__logo" />
+                <img src="/images/hulk-logo.svg" alt="Img" className="net__logo" />
               </NavLink>
             </div>
             <div className="user__avatar">

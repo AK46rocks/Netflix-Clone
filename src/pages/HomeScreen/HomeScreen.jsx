@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Rows from "../../components/Rows/Rows";
 import "./HomeScreen.css";
+import PreFooter from "../../components/PreFooter/PreFooter";
 
 function HomeScreen() {
   const [movieId, setMovieId] = useState("");
@@ -85,6 +86,8 @@ function HomeScreen() {
         <Rows title={"Documentaries"} fetchUrl={requests.fetchDocumentaries} />
         <Rows title={"Horror Movies"} fetchUrl={requests.fetchHorrorMovies} />
         <Rows title={"Romance Movies"} fetchUrl={requests.fetchRomanceMovies} /> */}
+
+        <PreFooter/>
         <Footer />
       </div>
     </>

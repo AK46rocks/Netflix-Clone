@@ -29,14 +29,14 @@
 }
 .card >  .login__btn{
     padding: 16px 20px;
-    background-color: #e50914;
+    background-color: #5D7924;
     color: white;
     border: 0;
     outline: 0;
     cursor: pointer;
 }
 .card > .login__btn:hover{
-    background-color: #e50914;
+    background-color: #5D7924;
 }
 .google_btn{
     background-color: white;

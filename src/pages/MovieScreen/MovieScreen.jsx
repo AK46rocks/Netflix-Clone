@@ -6,6 +6,7 @@ import Footer from "../../components/Footer/Footer";
 import Navbar from "../../components/Navbar/Navbar";
 import Rows from "../../components/Rows/Rows";
 import "./MovieScreen.css";
+import PreFooter from "../../components/PreFooter/PreFooter";
 
 const MovieScreen = () => {
   const { mediaType, id } = useParams();
@@ -25,6 +26,7 @@ const MovieScreen = () => {
           fetchUrl={`${mediaType}/${id}/similar?api_key=${API_KEY}&language=en-US&page=1`}
           mediaType={mediaType}
         />
+        <PreFooter/>
         <Footer />
       </div>
     </>

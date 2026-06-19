@@ -12,7 +12,7 @@ const SignupScreen = () => {
         <div className="container">
           <div className="nav">
             <div className="netflix__img">
-              <img src="./images/logo.png" alt="NetFlix_logo" />
+              <img src="./images/hulk-logo.svg" alt="NetFlix_logo" />
             </div>
             <div className="signup__btn">
               <button className="btn" onClick={() => setShow(true)}>

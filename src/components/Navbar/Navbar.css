@@ -6,8 +6,11 @@
 .navbar__dark{
     background-color: black;
 }
+.navbar-brand {
+    max-width: 80px;
+}
 .nav__logo{
-    width: 120.2px;
+    width: 100%;
 }
 .nav__avatar{
     width: 40px;

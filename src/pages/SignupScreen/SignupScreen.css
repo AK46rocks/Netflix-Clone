@@ -15,7 +15,7 @@
     justify-content: space-between;
 }
 .netflix__img img{
-    width: 150px;
+    width: 80px;
     height: 100%;
 }
 
@@ -23,7 +23,7 @@
     outline: none;
     border: none;
     color: white;
-    background-color: #e50914;
+    background-color: #5D7924;
     font-size: 1.2rem;
     font-weight: 500;
     padding: 7px 17px 7px 17px;
@@ -66,7 +66,7 @@
     outline: 0;
     border: 0;
     border-radius: 0;
-    background-color: #e50914;
+    background-color: #5D7924;
     color: white;
     padding: 13px 19px 11px 19px;
     font-size: 1rem;

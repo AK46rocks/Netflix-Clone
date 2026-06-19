@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./WatchMovieModal.css";
 
 const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
   const [selectedSeason, setSelectedSeason] = useState("1");
   const [selectedEpisode, setSelectedEpisode] = useState("1");
+  const [selectedServer, setSelectedServer] = useState("1");
   const [epCount, setEpCount] = useState(
     !tvSeasons ? "1" : `"${tvSeasons[1]?.episode_count}"`
   );
+
   useEffect(() => {
     if (movieType == "tv") {
       if (latestEpisode && selectedSeason == latestEpisode.season_number) {
@@ -17,6 +19,60 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
       }
     }
   }, [selectedSeason]);
+
+  const movieServerList = (media_type, serverId, contentId, selectedSeason, selectedEp) => {
+
+    if(media_type == "tv"){
+      switch(serverId) {
+        case "1":
+          return `https://vsembed.ru/embed/tv?tmdb=${contentId}&season=${selectedSeason}&episode=${selectedEp}`
+        case "2": 
+          return `https://multiembed.mov/?video_id=${contentId}&tmdb=1&s=${selectedSeason}&e=${selectedEp}`
+        case "3": 
+          return `https://www.2embed.skin/embedtv/${contentId}&s=${selectedSeason}&e=${selectedEp}`
+        default:
+          return `https://vsembed.ru/embed/tv?tmdb=${contentId}&season=${selectedSeason}&episode=${selectedEp}`
+      }
+    }
+    else {
+      switch(serverId) {
+        case "1":
+          return `https://vsrc.su/embed/movie/${contentId}/`
+        case "2": 
+          return `https://multiembed.mov?video_id=${contentId}&tmdb=1`
+        case "3": 
+          return `https://www.2embed.skin/embed/${contentId}`
+        default:
+          return `https://vsrc.su/embed/movie/${contentId}/`
+
+      }
+    }
+  }
+
+  const iframeRef = useRef(null);
+
+  const handleFullscreen = () => {
+    const iframe = iframeRef.current;
+  
+    // 1. Safety check MUST be first
+    if (!iframe) {
+      console.error("Iframe ref is not available yet.");
+      return;
+    }
+  
+    // 2. Check and trigger the correct modern/vendor method safely
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) { /* Safari / Older Chrome */
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) { /* Older Firefox */
+      iframe.mozRequestFullScreen();
+    } else if (iframe.msRequestFullscreen) { /* Older IE/Edge */
+      iframe.msRequestFullscreen();
+    } else {
+      console.error("Fullscreen API is not supported by this browser.");
+    }
+  };
 
   return (
     <>
@@ -31,9 +87,9 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
           <div className="modal-content">
             <div className="modal-header bg-dark">
               <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/1200px-Netflix_2015_logo.svg.png"
+                src="/public/images/hulk-logo.svg"
                 alt="Netflix"
-                width="80px"
+                width="60px"
               />
               <button
                 type="button"
@@ -74,17 +130,34 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
               ) : (
                 <></>
               )}
-              <span className="text-white">
-                Use Server 4, If Server 1 is not working
-              </span>
+              <select
+                className="select__server"
+                onChange={(e) => setSelectedServer(e.target.value)}
+              >
+                {Array.from(Array(4).keys())
+                  .slice(1)
+                  .map((item) => (
+                    <option value={item}>Server {item}</option>
+                  ))}
+              </select>
+
               <iframe
+              ref={iframeRef}
                 className="mt-2"
-                allow="fullscreen encrypted-media"
                 gesture="media"
-                src={`https://autoembed.to/${movieType}/tmdb/${movieId}-${selectedSeason}-${selectedEpisode}?server=1`}
+                src={movieServerList(movieType, selectedServer, movieId, selectedSeason, selectedEpisode)}
                 width="100%"
-                height="380px"
+                height="400px"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                allowFullScreen
               ></iframe>
+
+              <button
+                onClick={handleFullscreen}
+                className="fs__button"
+              >
+                Watch Fullscreen
+              </button>
             </div>
           </div>
         </div>
