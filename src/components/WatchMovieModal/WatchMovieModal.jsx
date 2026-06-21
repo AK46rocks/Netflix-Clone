@@ -45,15 +45,15 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
 
     if(media_type == "tv"){
       switch(serverId) {
-        case "1":
+        case "2":
           return `https://vsembed.ru/embed/tv?tmdb=${contentId}&season=${selectedSeason}&episode=${selectedEp}`
-        case "2": 
+        case "5": 
           return `https://multiembed.mov/?video_id=${contentId}&tmdb=1&s=${selectedSeason}&e=${selectedEp}`
         case "3": 
           return `https://www.2embed.skin/embedtv/${contentId}&s=${selectedSeason}&e=${selectedEp}`
-        case "4":  
+        case "1":  
           return `https://web.nxsha.app/embed/tv/${contentId}/${selectedSeason}/${selectedEp}?lang=hindi&autoplay=true`
-        case "5": 
+        case "4": 
           return `https://gemma416okl.com/play/${imdbId}`
         default:
           return `https://vsembed.ru/embed/tv?tmdb=${contentId}&season=${selectedSeason}&episode=${selectedEp}`
@@ -61,15 +61,15 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
     }
     else {
       switch(serverId) {
-        case "1":
+        case "2":
           return `https://vsrc.su/embed/movie/${contentId}/`
-        case "2": 
+        case "5": 
           return `https://multiembed.mov?video_id=${contentId}&tmdb=1`
         case "3": 
           return `https://www.2embed.skin/embed/${contentId}`
-        case "4": 
+        case "1": 
           return `https://web.nxsha.app/embed/movie/${contentId}?lang=hindi&autoplay=true`
-        case "5": 
+        case "4": 
           return `https://gemma416okl.com/play/${imdbId}`
         default:
           return `https://vsrc.su/embed/movie/${contentId}/`
@@ -164,7 +164,7 @@ const PlayMovie = ({ movieId, movieType, tvSeasons, latestEpisode }) => {
                 {Array.from(Array(6).keys())
                   .slice(1)
                   .map((item) => (
-                    <option value={item}>Server {item} {item == 4 || item == 5 ? "(Hindi)":""}</option>
+                    <option value={item}>Server {item} {item == 1 || item == 4 ? "(Multi-Lang)":""}</option>
                   ))}
               </select>
 
